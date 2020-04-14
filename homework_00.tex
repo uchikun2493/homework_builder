@@ -1,0 +1,62 @@
+% ****************************************
+% クラスの設定
+% ****************************************
+\documentclass[uplatex, 11pt]{jsarticle}
+
+% ****************************************
+% パッケージの設定
+% ****************************************
+% 図の挿入
+\usepackage[dvipdfmx]{graphicx}
+% 図の描画
+% \usepackage{tikz}
+
+% ****************************************
+% 見た目の設定
+% ****************************************
+% ページ番号を消去
+\pagestyle{empty}
+
+% ****************************************
+% 変数
+% ****************************************
+% 授業が何回目なのか
+\newcommand{\reportcount}{0}
+% 日付
+\newcommand{\classdate}{2020/4/14}
+% 提出日
+\newcommand{\deadline}{〜まで}
+
+% ****************************************
+% ドキュメント
+% ****************************************
+\begin{document}
+
+% タイトル部分
+\begin{center}
+    \textbf{とある授業 演習課題}, \classdate, 第\reportcount 週目 \\
+    担当：hogekawa hogeo, 提出期限：\deadline
+\end{center}
+
+% 学生記入欄
+\underline{
+    学籍番号：\hspace{3.0cm} \\
+    氏名：\hspace{4.5cm} \\
+    点数：\hspace{1.0cm} \\
+}
+
+% 番号付きのリストへ変換
+\def\labelenumi{(\theenumi)}
+\renewcommand{\thesection}{問題\arabic{section}}
+
+% 問題
+\section*{問題}
+\begin{enumerate}
+    \item hogehoge
+    \item hogehoge
+    \item hogehoge
+
+\end{enumerate}
+
+\end{document}
+
